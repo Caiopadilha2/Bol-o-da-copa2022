@@ -6,6 +6,10 @@ async function start() {
     // loggar a aplicação se tiver erros.
   })
 
+  fastify.get('/pools/count', () => {
+    return { count: 0 }
+  })
+
   await fastify.listen({ port: 3333 });
 }
 
